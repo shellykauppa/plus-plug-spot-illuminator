@@ -1,0 +1,17 @@
+{
+  "name": "plus-plug-spot-illuminator",
+  "version": "1.0.0",
+  "description": "Shelly MJS Script (https://shelly-api-docs.shelly.cloud/gen2/Scripts/ShellyScriptLanguageFeatures) for retrieving and indicating electricity spot prices in the LED of Shelly Plus Plug (S) using spot-hinta.fi and a dummy server for testing.",
+  "author": "antti@shellykauppa.fi (Shellykauppa.fi / Kotia Finland Inc.)",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node server/index.mjs"
+  },
+  "engines" : {
+    "node" : ">=18.0.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.36.0"
+  }
+}
