@@ -11,6 +11,8 @@ Key features:
 - Offline state distinguishable by white LED color
 - Listens for network / cloud service connect / disconnect events and reacts swiftly to changes in connectivity
 
+[![Video of the script running in development mode](http://img.youtube.com/vi/lC75SAEdaqg/0.jpg)](http://www.youtube.com/watch?v=lC75SAEdaqg "Shelly Plus Plug S:n värin ohjaus sähkön hinnan perusteella")
+
 ## Usage
 
 Install, enable and start the [script](shelly/index.js) as illustrated for example in the [Shelly script tutorial](https://shelly-api-docs.shelly.cloud/gen2/Scripts/Tutorial).
