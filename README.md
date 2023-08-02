@@ -45,6 +45,10 @@ Due to [mjs script](https://github.com/cesanta/mjs) having no support for proper
 
 It seems that there is a bug/feature in the device firmware 0.14.1 wherein if you visit the Home -> (Output) Settings -> LED Indication page of theinternal web server, the LED will reset to whatever state can be found there (for us it seems to be green with 80%/80% brightness). It will take until the next tick (max 15 minutes) for the color scheme to return. The same happens if the user manually changes LED colors.
 
+With Shelly gen2 firmware v1.0.0, a code limit of 15kB will be introduced. As the plus plug illuminator code exceeds that (~17kB), code comments are kept to a minimum and other ugliness is introduced (compressed tables, short variable names).
+
+For local development, set `API_HOST` variable to a local server and set `DEBUG` to true. This will make the code to poll for price changes every 5 seconds. Using `DEBUG=true` with spot-hinta.fi will soon result in your IP starting to get http 429 instead of data.
+
 ## Mock server
 
 This repository includes a mock node.js server that simulates the [api.spot-hinta.fi/JustNow](https://api.spot-hinta.fi/swagger/ui#/(JSON)%20Current%20hour%20(or%20one%20of%20the%20next%20hours)/JustNow) endpoint (for the parts we're interested) and returns random parametrizable prices. To run the server in http://localhost:4390 you can just run the following in the repository root:
