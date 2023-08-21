@@ -1,3 +1,5 @@
+:warning: WARNING: Firmware version 1.0.0 will fail to run this script properly. For further information, see https://github.com/shellykauppa/plus-plug-spot-illuminator/issues/2.
+
 # Shelly Plus Plug Spot Price Illuminator
 
 This is a [Shelly script](https://shelly-api-docs.shelly.cloud/gen2/Scripts/ShellyScriptLanguageFeatures) for [Shelly Plus Plug (S)](https://kb.shelly.cloud/knowledge-base/shelly-plus-plug-s) for lighting the LED according to electricity spot prices provided by the https://spot-hinta.fi API.
