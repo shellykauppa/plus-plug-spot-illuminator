@@ -191,9 +191,9 @@ let DEBUG = false;
 
 let isConnected = false;
 
-function reportConfigError(res, ec) {
+function reportConfigError(res, ec, em) {
   if( ec )
-    console.log("PPI: Config update error");
+    console.log("PPI: Config update error", ec, em);
 }
 
 function configureLight(shellyRGB, onBrightness, offBrightness) {
