@@ -206,7 +206,7 @@ function configureLight(shellyRGB, onBrightness, offBrightness) {
 
     uiConfig.leds.colors["switch:0"].on = onColorConfig;
 
-    let offColorConfig = Object.create( onColorConfig );
+    let offColorConfig = Object.assign( {}, onColorConfig );
     offColorConfig.brightness = offBrightness;
     uiConfig.leds.colors["switch:0"].off = offColorConfig;
 
