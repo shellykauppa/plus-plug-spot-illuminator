@@ -1,4 +1,4 @@
-:warning: WARNING: Firmware version 1.0.0 will fail to run this script properly. For further information, see https://github.com/shellykauppa/plus-plug-spot-illuminator/issues/2.
+:warning: WARNING: Firmware version 1.0.0 will fail to run this script properly. For further information, see https://github.com/shellykauppa/plus-plug-spot-illuminator/issues/2. Development for 1.x firmware can be found in the fw-1.x-support branch.
 
 # Shelly Plus Plug Spot Price Illuminator
 
