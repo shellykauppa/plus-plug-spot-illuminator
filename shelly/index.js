@@ -206,11 +206,15 @@ function configureLight(shellyRGB, onBrightness, offBrightness) {
 
     uiConfig.leds.colors["switch:0"].on = onColorConfig;
 
-    let offColorConfig = Object.create( onColorConfig );
+    let offColorConfig = Object.assign( {}, onColorConfig );
     offColorConfig.brightness = offBrightness;
     uiConfig.leds.colors["switch:0"].off = offColorConfig;
 
-    Shelly.call( "PLUGS_UI.SetConfig", { config: uiConfig }, reportConfigError )
+    // This call would fail in firmware 1.0.0-beta up to at least 1.0.8:
+    // Shelly.call( "PLUGS_UI.SetConfig", { config: uiConfig }, reportConfigError )
+    // Hence, using the rpc api to achieve the same.
+    let configUrl = "http://localhost/rpc/PLUGS_UI.SetConfig?config=" + JSON.stringify(uiConfig);
+    Shelly.call("HTTP.Request", { method: "GET", url: configUrl, timeout: 15, ssl_ca: "*" }, reportConfigError);
   }
   else {
     console.log("PPI: Incorrect color mode (", uiConfig.leds.mode, "), should be \"switch\"");

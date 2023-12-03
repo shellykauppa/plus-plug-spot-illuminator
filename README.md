@@ -1,5 +1,3 @@
-:warning: WARNING: Firmware version 1.0.0 will fail to run this script properly. For further information, see https://github.com/shellykauppa/plus-plug-spot-illuminator/issues/2. Development for 1.x firmware can be found in the fw-1.x-support branch.
-
 # Shelly Plus Plug Spot Price Illuminator
 
 This is a [Shelly script](https://shelly-api-docs.shelly.cloud/gen2/Scripts/ShellyScriptLanguageFeatures) for [Shelly Plus Plug (S)](https://kb.shelly.cloud/knowledge-base/shelly-plus-plug-s) for lighting the LED according to electricity spot prices provided by the https://spot-hinta.fi API.
@@ -22,6 +20,8 @@ Install, enable and start the [script](shelly/index.js) as illustrated for examp
 ## Requirements
 
 The Plus Plug (S) LED setting has to be `switch` (as opposed to `power` or `off`) in order for the colors to work. At script initialization, the script will change mode to `switch` if not already. If the mode changes during runtime, the script will continue to run but will not perform any actions.
+
+Plus Plug firmware needs to be newer than 1.0 (tested on 1.0.8).
 
 ## Operation
 
