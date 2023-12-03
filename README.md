@@ -21,6 +21,8 @@ Install, enable and start the [script](shelly/index.js) as illustrated for examp
 
 The Plus Plug (S) LED setting has to be `switch` (as opposed to `power` or `off`) in order for the colors to work. At script initialization, the script will change mode to `switch` if not already. If the mode changes during runtime, the script will continue to run but will not perform any actions.
 
+Plus Plug firmware needs to be newer than 1.0 (tested on 1.0.8).
+
 ## Operation
 
 Spot price for the user configurable Spot area (default `FI`) is retrieved immediately at script startup and periodically at every even 15 minutes (hh:00, hh:15, hh:30, hh:45) after that. When price is received, the script sets the LED color according to the user configurable table of price thresholds <-> LED colors / brightness values. In order to separate between switch `on` and `off` states, a different brightness level is used. When connection to cloud service (if used at all) or local network is severed, the device LED is colored white and when connection returns the normal operations are resumed.
